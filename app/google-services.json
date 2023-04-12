@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1088294079979",
+    "project_id": "malal-f5d18",
+    "storage_bucket": "malal-f5d18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088294079979:android:864cabbfc1e0d117bc5dae",
+        "android_client_info": {
+          "package_name": "com.example.malal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088294079979-1onrai8oonhiq07gce18gmb4ip7ld892.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.malal",
+            "certificate_hash": "0bde241dcee9c21b4a05026b5bee534fffb14467"
+          }
+        },
+        {
+          "client_id": "1088294079979-p6mp1hhd6hjsnh1vatshe2mjlqv9t34h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjDRduYtfpiM7oJbGOIiXCHr2D7BsHr4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088294079979-p6mp1hhd6hjsnh1vatshe2mjlqv9t34h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

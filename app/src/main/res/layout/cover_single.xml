@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="product"
+            type="com.example.malal.model.ProductModel" />
+        <variable
+            name="productListener"
+            type="com.example.malal.presentation.adapter.ProductItemsAdapter.ProductListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="480dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/productImage_coverPage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            imageBeautyImages="@{product.api_featured_image}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/productCheck_coverPage"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/check"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_bg"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:onClick="@{()->productListener.onProductClick(product)}"
+                app:layout_constraintBottom_toBottomOf="@+id/productImage_coverPage"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="40dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
