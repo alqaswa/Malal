@@ -19,6 +19,8 @@ import com.example.malal.util.LOADING_ANNOTATION
 import com.example.malal.util.PRODUCT_JSON
 import com.example.malal.viewmodel.ShopViewModel
 import com.example.malal.util.Resource
+import com.example.malal.util.extention.hide
+import com.example.malal.util.extention.show
 import com.example.malal.util.extention.showToast
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -71,12 +73,14 @@ class HomeFragment : Fragment(R.layout.fragment_home),ProductItemsAdapter.Produc
                 }
                 is Resource.Success ->
                 {
+                    showView()
                     binding.productList=it.data
                     loadingDialog.hide()
                 }
                 is Resource.Error ->
                 {
                     loadingDialog.hide()
+                    hideView()
                     showToast(it.message.toString())
                 }
                 else ->
@@ -85,6 +89,15 @@ class HomeFragment : Fragment(R.layout.fragment_home),ProductItemsAdapter.Produc
                 }
             }
         }
+
+    }
+    private fun hideView()
+    {
+        binding.MainScrollViewHomeFrag.hide()
+    }
+    private fun showView()
+    {
+        binding.MainScrollViewHomeFrag.show()
     }
     override fun onProductClick(productModel:ProductModel)
     {

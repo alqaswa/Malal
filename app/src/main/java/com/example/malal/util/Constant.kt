@@ -17,4 +17,5 @@ const val PRODUCT_JSON="CosmeticProducts.json"
 const val SINGLE_DETAIL_VIEW=3
 const val DOUBLE_DETAIL_VIEW=4
 const val MyTag="MyTag"
+const val BRAND="maybelline"
 const val MAKE_UP_DATABASE="makeUpDb"

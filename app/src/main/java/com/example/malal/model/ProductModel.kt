@@ -39,7 +39,7 @@ data class ProductModel(
         override fun hashCode(): Int
         {
                 var result = id.hashCode()
-                if(price_sign.isEmpty())
+                if(price_sign=="null")
                 {
                         result = 31 * result + price_sign.hashCode()
                 }
