@@ -1,5 +1,5 @@
 # Malal
-E-commerce android application for beauty products using firebase firestore for online database , firebase storage for uploading user data, firebase authentication and advanced android topics. E-commerce android application that makes user buy their beauty products easily .
+MakeUp android application for beauty products using firebase firestore for online database , firebase storage for uploading user data, firebase authentication and advanced android topics.Android application that makes user buy their beauty products easily .
 
 # Architecture
 MVVM is pretty good in such cases. It goes one step further in separating the responsibilities of your code base. It clearly abstracts the logic of the actions that can be performed in the app.
