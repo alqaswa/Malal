@@ -63,7 +63,7 @@
                         android:id="@+id/cartName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@{productModel.name}"
+                        removeWhiteSpaces="@{productModel.name}"
                         tools:text="Name"
                         android:textSize="18sp"
                         android:maxLines="1"

@@ -18,7 +18,6 @@ import com.example.malal.databinding.ActivityMainBinding
 import com.example.malal.presentation.fragment.main.CartFragment
 import com.example.malal.presentation.fragment.main.CheckoutFragment
 import com.example.malal.util.ConnectionLiveData
-import com.example.malal.util.MyTag
 import com.example.malal.util.extention.hide
 import com.example.malal.util.extention.hideBottomNav
 import com.example.malal.util.extention.show

@@ -207,4 +207,5 @@
     <string name="orderPlaced">Order placed successfully</string>
     <string name="no_internet">OOPS! NO INTERNET</string>
     <string name="check_internet">Please check your network connection and try again later</string>
+    <string name="home_">Home</string>
 </resources>

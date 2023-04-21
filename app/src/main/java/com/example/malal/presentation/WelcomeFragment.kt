@@ -11,7 +11,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.malal.R
 import com.example.malal.databinding.FragmentWelcomeBinding
-import com.example.malal.util.MyTag
 import com.example.malal.viewmodel.AuthenticationViewModel
 import com.example.malal.viewmodel.ShopViewModel
 import dagger.hilt.android.AndroidEntryPoint

@@ -22,7 +22,9 @@ import com.example.malal.databinding.FragmentItemDetailsBinding
 import com.example.malal.model.ProductModel
 import com.example.malal.presentation.adapter.ItemDetailsAdapter
 import com.example.malal.util.LOADING_ANNOTATION
+import com.example.malal.util.PRODUCT_MODEL
 import com.example.malal.util.extention.loadTimerGif
+import com.example.malal.util.extention.showToast
 import com.example.malal.viewmodel.ShopViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -47,7 +49,7 @@ class ItemDetailsFragment:Fragment(),ItemDetailsAdapter.ItemDetailListener
     {
         super.onCreate(savedInstanceState)
 
-        productModel=requireArguments().getParcelable("productItem")!!
+        productModel=requireArguments().getParcelable(PRODUCT_MODEL)!!
         shopViewModel.getProductByBrand(productModel.brand)
 
         sharedElementEnterTransition =TransitionInflater.from(context).inflateTransition(android.R.transition.move)
@@ -132,7 +134,7 @@ class ItemDetailsFragment:Fragment(),ItemDetailsAdapter.ItemDetailListener
     override fun onProductClick(productModel:ProductModel)
     {
         val bundle=Bundle()
-        bundle.putParcelable("productItem",productModel)
+        bundle.putParcelable(PRODUCT_MODEL,productModel)
 
         val navOption=NavOptions.Builder()
             .setEnterAnim(R.anim.slide_in_right)

@@ -23,7 +23,6 @@ import com.example.malal.model.AddressModel
 import com.example.malal.model.UserInfoModel
 import com.example.malal.util.CACHE_DIR
 import com.example.malal.util.LOADING_ANNOTATION
-import com.example.malal.util.MyTag
 import com.example.malal.util.Resource
 import com.example.malal.util.extention.closeFragment
 import com.example.malal.util.extention.showToast

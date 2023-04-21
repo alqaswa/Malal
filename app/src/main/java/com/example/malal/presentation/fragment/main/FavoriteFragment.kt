@@ -20,6 +20,7 @@ import com.example.malal.databinding.FragmentFavoriteBinding
 import com.example.malal.model.ProductModel
 import com.example.malal.presentation.adapter.FavoriteAdapter
 import com.example.malal.util.LOADING_ANNOTATION
+import com.example.malal.util.PRODUCT_MODEL
 import com.example.malal.util.Resource
 import com.example.malal.util.extention.hide
 import com.example.malal.util.extention.show
@@ -125,7 +126,7 @@ class FavoriteFragment:Fragment(), FavoriteAdapter.FavoriteProductListener
     private fun navigateToItemDetailsFragment(productModel: ProductModel, transitionImageView: ImageView)
     {
         val bundle=Bundle()
-        bundle.putParcelable("productItem",productModel)
+        bundle.putParcelable(PRODUCT_MODEL,productModel)
 
         val extras = FragmentNavigatorExtras(transitionImageView to productModel.api_featured_image)
         findNavController().navigate(R.id.itemDetailsFragment,bundle,null, navigatorExtras =extras)

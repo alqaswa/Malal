@@ -12,7 +12,6 @@ import com.example.malal.R
 import com.example.malal.databinding.FragmentExploreBinding
 import com.example.malal.model.Categories
 import com.example.malal.presentation.adapter.ExploreAdapter
-import com.example.malal.util.MyTag
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

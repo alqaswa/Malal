@@ -19,6 +19,7 @@ import com.example.malal.presentation.adapter.ItemDetailsAdapter
 import com.example.malal.presentation.adapter.ProductCategoryAdapter
 import com.example.malal.presentation.adapter.ProductItemsAdapter
 import com.example.malal.util.LOADING_ANNOTATION
+import com.example.malal.util.PRODUCT_MODEL
 import com.example.malal.util.Resource
 import com.example.malal.viewmodel.ShopViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -112,7 +113,7 @@ class ProductCategoryFragment:Fragment(),ProductItemsAdapter.ProductListener
     override fun onProductClick(productModel:ProductModel)
     {
         val bundle=Bundle()
-        bundle.putParcelable("productItem",productModel)
+        bundle.putParcelable(PRODUCT_MODEL,productModel)
         findNavController().navigate(R.id.itemDetailsFragment,bundle)
     }
 }

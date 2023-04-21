@@ -17,6 +17,7 @@ import com.example.malal.model.ProductModel
 import com.example.malal.presentation.adapter.ProductItemsAdapter
 import com.example.malal.util.LOADING_ANNOTATION
 import com.example.malal.util.PRODUCT_JSON
+import com.example.malal.util.PRODUCT_MODEL
 import com.example.malal.viewmodel.ShopViewModel
 import com.example.malal.util.Resource
 import com.example.malal.util.extention.hide
@@ -52,6 +53,7 @@ class HomeFragment : Fragment(R.layout.fragment_home),ProductItemsAdapter.Produc
     {
         binding=DataBindingUtil.inflate(inflater,R.layout.fragment_home,container,false)
         setCoverData()
+        showView()
         return binding.root
     }
 
@@ -93,16 +95,27 @@ class HomeFragment : Fragment(R.layout.fragment_home),ProductItemsAdapter.Produc
     }
     private fun hideView()
     {
-        binding.MainScrollViewHomeFrag.hide()
+        binding.apply {
+            newLayout.hide()
+            saleLayout.hide()
+            coverRecView.hide()
+            networkLayout.show()
+        }
     }
     private fun showView()
     {
-        binding.MainScrollViewHomeFrag.show()
+        binding.apply {
+            newLayout.show()
+            saleLayout.show()
+            coverRecView.show()
+            networkLayout.hide()
+        }
     }
+
     override fun onProductClick(productModel:ProductModel)
     {
         val bundle=Bundle()
-        bundle.putParcelable("productItem",productModel)
+        bundle.putParcelable(PRODUCT_MODEL,productModel)
 
         val navOption=NavOptions.Builder()
             .setEnterAnim(R.anim.slide_in_right)
@@ -141,7 +154,7 @@ class HomeFragment : Fragment(R.layout.fragment_home),ProductItemsAdapter.Produc
 
         val coverD: List<ProductModel> = gson.fromJson(jsonFileString, offlineProducts)
 
-        coverD.forEachIndexed { idx, products ->
+        coverD.forEachIndexed { _, products ->
 
             offlineProductsList.add(products)
             offlineProductsList.add(products)
