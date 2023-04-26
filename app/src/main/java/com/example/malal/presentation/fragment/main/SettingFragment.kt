@@ -1,5 +1,6 @@
 package com.example.malal.presentation.fragment.main
 
+import android.app.Activity
 import android.app.Dialog
 import android.content.Intent
 import android.graphics.Bitmap
@@ -239,8 +240,11 @@ class SettingFragment:Fragment()
     private val cameraResultLauncher=registerForActivityResult(ActivityResultContracts.StartActivityForResult())
     {
         result ->
-        val bitmap=result.data?.extras?.get("data") as Bitmap
-        bitmapToImageUri(bitmap)
+        if(result.resultCode==Activity.RESULT_OK)
+        {
+            val bitmap=result.data?.extras?.get("data") as Bitmap
+            bitmapToImageUri(bitmap)
+        }
 
     }
 
