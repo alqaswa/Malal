@@ -28,7 +28,8 @@ class UserInfoViewModel @Inject constructor(private val authenticationRepository
         getUserAddress()
     }
 
-    private fun getUserInformation(){
+    private fun getUserInformation()
+    {
         viewModelScope.launch(Dispatchers.IO) {
             authenticationRepository.getUserInformation(_userInformation)
         }

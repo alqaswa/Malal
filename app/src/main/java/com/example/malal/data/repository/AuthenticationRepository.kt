@@ -155,8 +155,6 @@ class AuthenticationRepository @Inject constructor(private val sharedPreferenceH
     }
 
 
-
-
     fun getUserInformation(userInfoLiveData: MutableLiveData<Resource<UserInfoModel>>)
     {
         firebaseFirestore.collection(USERS_COLLECTION).document(userUid)
