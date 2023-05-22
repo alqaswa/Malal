@@ -36,6 +36,12 @@ class LoginFragment : Fragment()
     @Named(LOADING_ANNOTATION)
     lateinit var loadingDialog:Dialog
 
+    override fun onCreate(savedInstanceState:Bundle?)
+    {
+        super.onCreate(savedInstanceState)
+        loadingDialog.hide()
+    }
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
     {
