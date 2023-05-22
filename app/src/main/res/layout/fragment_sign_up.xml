@@ -99,7 +99,7 @@
                 android:background="@drawable/edit_text_bg"
                 android:fontFamily="@font/metropolis_regular"
                 android:hint="@string/hint_confirm_password"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:maxLines="1" />
 
             <androidx.appcompat.widget.AppCompatButton

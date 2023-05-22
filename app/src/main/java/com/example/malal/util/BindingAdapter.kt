@@ -101,7 +101,7 @@ fun setImage(imageView:ImageView, link: String) {
 
 @BindingAdapter("imageUrl")
 fun loadImage(imageView:ImageView, link: String) {
-    imageView.loadGif(R.drawable.spinner)
+    //imageView.loadGif(R.drawable.spinner)
 
     if(link != "null")
     {

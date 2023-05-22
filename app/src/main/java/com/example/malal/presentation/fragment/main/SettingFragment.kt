@@ -90,7 +90,6 @@ class SettingFragment:Fragment()
                     loadingDialog.hide()
                     showToast(info.data!!)
                     authViewModel.setUserInformationValue()
-                    closeFragment()
                 }
                 is Resource.Error ->
                 {
